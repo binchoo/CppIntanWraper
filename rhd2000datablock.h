@@ -17,7 +17,6 @@
 //
 // See http://www.intantech.com for documentation and product information.
 //----------------------------------------------------------------------------------
-
 #ifndef RHD2000DATABLOCK_H
 #define RHD2000DATABLOCK_H
 
@@ -55,7 +54,7 @@ private:
     void allocateUIntArray1D(vector<unsigned int> &array1D, int xSize);
 
     void writeWordLittleEndian(ofstream &outputStream, int dataWord) const;
-    void writeWordLittleEndian(ostream &outputStream, int dataWord) const;
+    void writeWordLittleEndian(ostream& outputStream, int dataWord) const;
 
     unsigned int convertUsbTimeStamp(unsigned char usbBuffer[], int index);
     int convertUsbWord(unsigned char usbBuffer[], int index);

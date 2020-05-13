@@ -17,7 +17,6 @@
 //
 // See http://www.intantech.com for documentation and product information.
 //----------------------------------------------------------------------------------
-
 #ifndef RHD2000EVALBOARD_H
 #define RHD2000EVALBOARD_H
 
@@ -27,6 +26,7 @@
 #define FIFO_CAPACITY_WORDS 67108864
 
 #include <queue>
+#include <string>
 
 using namespace std;
 
