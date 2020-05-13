@@ -99,6 +99,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="getopt.c" />
+    <ClCompile Include="IntanWrapperMaincpp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="okFrontPanelDLL.cpp" />
     <ClCompile Include="rhd2000datablock.cpp" />
@@ -107,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="getopt.h" />
+    <ClInclude Include="IntanWrapperMain.h" />
     <ClInclude Include="okFrontPanelDLL.h" />
     <ClInclude Include="rhd2000datablock.h" />
     <ClInclude Include="rhd2000evalboard.h" />
