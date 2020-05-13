@@ -16,6 +16,11 @@ public:
     void* argumentParse(int argc, char** argv);
     void execute(void (*callback)());
     void printValues();
+    unsigned int getTimeSteps();
+    unsigned int getSamplingRate();
+    string getPriority();
+    string getDataStreams();
+    
 
 private:
     Rhd2000EvalBoard* evalBoard;

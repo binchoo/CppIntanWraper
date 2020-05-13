@@ -19,11 +19,10 @@ void IntanWrapperMain::initIntanEvalBoard() {
 	string bitFileName = "main.bit";
 
 	evalBoard->open();
+	evalBoard->uploadFpgaBitfile(bitFileName);
 	evalBoard->initialize();
 
-	evalBoard->uploadFpgaBitfile(bitFileName);
 	evalBoard->setDataSource(0, Rhd2000EvalBoard::PortA1);
-	evalBoard->setCableLengthFeet(Rhd2000EvalBoard::PortA, 3.0);
 
 	setIntanEvalBoardSamplingRate();
 	setIntanEvalBoardRegisters();
@@ -130,7 +129,6 @@ void* IntanWrapperMain::argumentParse(int argc, char** argv) {
 	}
 
 	initIntanEvalBoard();
-	printValues();
 	return nullptr;
 }
 
@@ -143,4 +141,24 @@ void IntanWrapperMain::printValues() {
 	cout << "Sampling Rate = " << samplingRate << endl;
 	cout << "Priority = " << priority << endl;
 	cout << "DataStreams = " << dataStreams << endl;
+}
+
+unsigned int IntanWrapperMain::getTimeSteps()
+{
+	return timeSteps;
+}
+
+unsigned int IntanWrapperMain::getSamplingRate()
+{
+	return samplingRate;
+}
+
+string IntanWrapperMain::getPriority()
+{
+	return priority;
+}
+
+string IntanWrapperMain::getDataStreams()
+{
+	return dataStreams;
 }

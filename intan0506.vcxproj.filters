@@ -36,6 +36,9 @@
     <ClCompile Include="IntanWrapperMaincpp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="signalReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="okFrontPanelDLL.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IntanWrapperMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="signalReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

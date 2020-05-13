@@ -105,6 +105,7 @@
     <ClCompile Include="rhd2000datablock.cpp" />
     <ClCompile Include="rhd2000evalboard.cpp" />
     <ClCompile Include="rhd2000registers.cpp" />
+    <ClCompile Include="signalReader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="getopt.h" />
@@ -113,6 +114,7 @@
     <ClInclude Include="rhd2000datablock.h" />
     <ClInclude Include="rhd2000evalboard.h" />
     <ClInclude Include="rhd2000registers.h" />
+    <ClInclude Include="signalReader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

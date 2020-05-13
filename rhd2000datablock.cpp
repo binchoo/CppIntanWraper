@@ -397,68 +397,52 @@ for (i = 0;i < AXIS1_MAX; i++)                \
     for (j = 0; j < AXIS2_MAX; j++)                \
         for(k = 0; k < AXIS3_MAX; k++)
 
-#define create_object(name) \
-    name = struct object {};
-
 // Write contents of data block to a binary output stream (saveOut) in little endian format.
-void Rhd2000DataBlock::write(ostream& saveOut,int numDataStreams, char* priority) const
+void Rhd2000DataBlock::write(int numDataStreams, string priority) const
 {
-    //SAMPLES_PER_DATA_BLOCK, 32, numDataStreams  ==  time channel stream
-   if(strcmp("sct",priority)==0){
+    cout << "priority: " << priority << endl;
+
+   if (priority.compare("sct") == 0){
        for_with_axis(numDataStreams, 32, SAMPLES_PER_DATA_BLOCK, stream, channel, time) {
-        unsigned short signal = amplifierData[stream][channel][time];
-
-        fwrite((char*)&signal, sizeof(signal), 1, stdout);
-        //saveOut << amplifierData[stream][channel][time];
-        }
-
+            unsigned short signal = amplifierData[stream][channel][time];
+            fwrite((char*)&signal, sizeof(signal), 1, stdout);
+       }
    }
-   else if(strcmp("stc",priority)==0){
+   else if (priority.compare("stc") == 0){
        for_with_axis(numDataStreams, SAMPLES_PER_DATA_BLOCK, 32, stream, time, channel) {
-        unsigned short signal = amplifierData[stream][channel][time];
-
-        fwrite((char*)&signal, sizeof(signal), 1, stdout);
-        //saveOut << amplifierData[stream][channel][time];
+            unsigned short signal = amplifierData[stream][channel][time];
+            fwrite((char*)&signal, sizeof(signal), 1, stdout);
         }
 
    }
-   else if(strcmp("cst",priority)==0){
+   else if (priority.compare("cst") == 0){
        for_with_axis(32, numDataStreams, SAMPLES_PER_DATA_BLOCK, channel, stream, time) {
-        unsigned short signal = amplifierData[stream][channel][time];
-
+           unsigned short signal = amplifierData[stream][channel][time];
         fwrite((char*)&signal, sizeof(signal), 1, stdout);
-        //saveOut << amplifierData[stream][channel][time];
         }
-       
    }
-   else if(strcmp("cts",priority)==0){
+   else if (priority.compare("cts") == 0){
        for_with_axis(32, SAMPLES_PER_DATA_BLOCK, numDataStreams, channel, time, stream) {
         unsigned short signal = amplifierData[stream][channel][time];
 
         fwrite((char*)&signal, sizeof(signal), 1, stdout);
-        //saveOut << amplifierData[stream][channel][time];
         }
        
    }
-   else if(strcmp("tsc",priority)==0){
+   else if (priority.compare("tsc") == 0){
        for_with_axis(SAMPLES_PER_DATA_BLOCK, numDataStreams, 32, time, stream, channel) {
         unsigned short signal = amplifierData[stream][channel][time];
 
         fwrite((char*)&signal, sizeof(signal), 1, stdout);
-        //saveOut << amplifierData[stream][channel][time];
         }
        
    } 
-   else{ //tcs
-    for_with_axis(SAMPLES_PER_DATA_BLOCK, 32, numDataStreams, time, channel, stream) {
+   else { //tcs
+        for_with_axis(SAMPLES_PER_DATA_BLOCK, 32, numDataStreams, time, channel, stream) {
         unsigned short signal = amplifierData[stream][channel][time];
 
         fwrite((char*)&signal, sizeof(signal), 1, stdout);
-        //saveOut << amplifierData[stream][channel][time];
         }
-
    }
-
-    
 }
 

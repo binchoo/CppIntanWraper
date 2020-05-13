@@ -23,6 +23,7 @@
 #include <time.h>
 #include <assert.h>
 #include "IntanWrapperMain.h"
+#include "signalReader.h"
 #include <iostream>
 
 using namespace std;
@@ -31,10 +32,12 @@ void initIntanEvalBoard(Rhd2000EvalBoard*);
 
 int main(int argc, char *argv[])
 {
-
     Rhd2000EvalBoard *evalBoard = new Rhd2000EvalBoard;
     IntanWrapperMain mainer = IntanWrapperMain(evalBoard);
     mainer.argumentParse(argc, argv);
+    mainer.printValues();
+    SignalReader signalReader = SignalReader(evalBoard, mainer.getTimeSteps(), mainer.getSamplingRate());
+    signalReader.run(mainer.getPriority());
 }
 
 void initIntanEvalBoard(Rhd2000EvalBoard* evalBoard) {
