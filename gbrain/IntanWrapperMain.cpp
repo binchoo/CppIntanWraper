@@ -1,25 +1,43 @@
 #pragma once
-
-#include "IntanWrapperMain.h"
+#include "intanInitializer.h"
 #include "../getopt/getopt.h"
 
-#include <iostream>
 using namespace std;
 
-IntanWrapperMain::IntanWrapperMain(Rhd2000EvalBoard* evalBoard) {
-	timeSteps = 1000;
+const map<unsigned int, Rhd2000EvalBoard::AmplifierSampleRate> IntanInitializer::samplingRateTable = {
+		{ 1000, Rhd2000EvalBoard::AmplifierSampleRate::SampleRate1000Hz },
+		{ 1250, Rhd2000EvalBoard::AmplifierSampleRate::SampleRate1250Hz },
+		{ 1500, Rhd2000EvalBoard::AmplifierSampleRate::SampleRate1500Hz },
+		{ 2000, Rhd2000EvalBoard::AmplifierSampleRate::SampleRate2000Hz },
+		{ 2500, Rhd2000EvalBoard::AmplifierSampleRate::SampleRate2500Hz },
+		{ 3000, Rhd2000EvalBoard::AmplifierSampleRate::SampleRate3000Hz },
+		{ 3333, Rhd2000EvalBoard::AmplifierSampleRate::SampleRate3333Hz },
+		{ 4000, Rhd2000EvalBoard::AmplifierSampleRate::SampleRate4000Hz },
+		{ 5000, Rhd2000EvalBoard::AmplifierSampleRate::SampleRate5000Hz },
+		{ 6250, Rhd2000EvalBoard::AmplifierSampleRate::SampleRate6250Hz },
+		{ 8000, Rhd2000EvalBoard::AmplifierSampleRate::SampleRate8000Hz },
+		{ 10000,Rhd2000EvalBoard::AmplifierSampleRate::SampleRate10000Hz },
+		{ 12500,Rhd2000EvalBoard::AmplifierSampleRate::SampleRate12500Hz },
+		{ 15000,Rhd2000EvalBoard::AmplifierSampleRate::SampleRate15000Hz },
+		{ 20000,Rhd2000EvalBoard::AmplifierSampleRate::SampleRate20000Hz },
+		{ 25000,Rhd2000EvalBoard::AmplifierSampleRate::SampleRate25000Hz },
+		{ 30000,Rhd2000EvalBoard::AmplifierSampleRate::SampleRate30000Hz },
+};
+
+IntanInitializer::IntanInitializer(Rhd2000EvalBoard* evalBoard) {
+	runningTime = 1000;
 	samplingRate = 12500;
 	priority = "tsc";
-	dataStreams = "0415";
+	dataStreams = "04";
 	this->evalBoard = evalBoard;
 }
 
-void IntanWrapperMain::initIntanEvalBoard() {
-	
-	string bitFileName = "main.bit";
-
+void IntanInitializer::initIntanEvalBoard() {	
 	evalBoard->open();
+
+	string bitFileName = "main.bit";
 	evalBoard->uploadFpgaBitfile(bitFileName);
+	
 	evalBoard->initialize();
 
 	evalBoard->setDataSource(0, Rhd2000EvalBoard::PortA1);
@@ -29,18 +47,13 @@ void IntanWrapperMain::initIntanEvalBoard() {
 	setIntanEvalBoardDataStreams();
 }
 
-void IntanWrapperMain::setIntanEvalBoardSamplingRate() {
-	try {
-		evalBoard->setSampleRate(samplingRateTable.at(samplingRate));
-
-	}
-	catch (exception& e) {
+void IntanInitializer::setIntanEvalBoardSamplingRate() {
+	if (samplingRateTable.find(samplingRate) == samplingRateTable.end())
 		samplingRate = 12500;
-		evalBoard->setSampleRate(samplingRateTable.at(samplingRate));
-	}
+	evalBoard->setSampleRate(samplingRateTable.at(samplingRate));
 }
 
-void IntanWrapperMain::setIntanEvalBoardRegisters() {
+void IntanInitializer::setIntanEvalBoardRegisters() {
 	vector<int> commandList;
 	int commandSequenceLength;
 	
@@ -68,14 +81,14 @@ void IntanWrapperMain::setIntanEvalBoardRegisters() {
 	evalBoard->selectAuxCommandBank(Rhd2000EvalBoard::PortA, Rhd2000EvalBoard::AuxCmd3, 1);
 }
 
-void IntanWrapperMain::setIntanEvalBoardDataStreams() {
+void IntanInitializer::setIntanEvalBoardDataStreams() {
 	for (char& ch : dataStreams) {
 		int dataStream = ch - '0';
 		evalBoard->enableDataStream(dataStream, true);
 	}
 }
 
-bool IntanWrapperMain::checkValidityForPriority(string priority) {
+bool IntanInitializer::checkValidityForPriority(string priority) {
 	static const string validCharacters = "tsc";
 	bool result = true;
 	for (char& ch : priority) {
@@ -87,7 +100,7 @@ bool IntanWrapperMain::checkValidityForPriority(string priority) {
 	return result;
 }
 
-bool IntanWrapperMain::checkValidityForDataStreams(string dataStreams) {
+bool IntanInitializer::checkValidityForDataStreams(string dataStreams) {
 	static const string validCharacters = "0415";
 	int result = true;
 	for (char& ch : dataStreams) {
@@ -99,7 +112,7 @@ bool IntanWrapperMain::checkValidityForDataStreams(string dataStreams) {
 	return result;
 }
 
-void* IntanWrapperMain::argumentParse(int argc, char** argv) {
+void IntanInitializer::argumentParse(int argc, char** argv) {
 	char opt;
 	while ((opt = getopt(argc, argv, "s:t:p:P:a")) != -1) {
 		switch (opt) {
@@ -107,7 +120,7 @@ void* IntanWrapperMain::argumentParse(int argc, char** argv) {
 				samplingRate = atoi(optarg);
 				break;
 			case 't':
-				timeSteps = atoi(optarg);
+				runningTime = atoi(optarg);
 				break;
 			case 'p':
 				if (checkValidityForPriority(string(optarg)))
@@ -127,38 +140,28 @@ void* IntanWrapperMain::argumentParse(int argc, char** argv) {
 				break;
 		}
 	}
-
 	initIntanEvalBoard();
-	return nullptr;
 }
 
-void IntanWrapperMain::execute(void (*callback)()) {
-	callback();
-}
-
-void IntanWrapperMain::printValues() {
-	cout << "Time Steps = " << timeSteps << endl;
+void IntanInitializer::printParameters() {
+	cout << "Time Steps = " << runningTime << endl;
 	cout << "Sampling Rate = " << samplingRate << endl;
 	cout << "Priority = " << priority << endl;
 	cout << "DataStreams = " << dataStreams << endl;
 }
 
-unsigned int IntanWrapperMain::getTimeSteps()
-{
-	return timeSteps;
+unsigned int IntanInitializer::getTimeSteps() {
+	return runningTime;
 }
 
-unsigned int IntanWrapperMain::getSamplingRate()
-{
+unsigned int IntanInitializer::getSamplingRate() {
 	return samplingRate;
 }
 
-string IntanWrapperMain::getPriority()
-{
+string IntanInitializer::getPriority() {
 	return priority;
 }
 
-string IntanWrapperMain::getDataStreams()
-{
+string IntanInitializer::getDataStreams() {
 	return dataStreams;
 }

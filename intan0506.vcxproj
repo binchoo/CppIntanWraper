@@ -109,7 +109,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="gbrain\IntanWrapperMain.h" />
+    <ClInclude Include="gbrain\intanInitializer.h" />
     <ClInclude Include="gbrain\logger.h" />
     <ClInclude Include="gbrain\signalReader.h" />
     <ClInclude Include="getopt\getopt.h" />

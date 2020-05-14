@@ -17,26 +17,25 @@
 // See http://www.intantech.com for documentation and product information.
 //----------------------------------------------------------------------------------
 
-#include <fstream>
-#include <vector>
-#include <queue>
-#include <time.h>
-#include <assert.h>
-#include <iostream>
-#include "./gbrain/IntanWrapperMain.h"
+#include <fcntl.h>
+#include <io.h>
+#include "./gbrain/intanInitializer.h"
 #include "./gbrain/signalReader.h"
 #include "./gbrain/logger.h"
 
-using namespace std;
-
-
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
-    Rhd2000EvalBoard *evalBoard = new Rhd2000EvalBoard;
-    IntanWrapperMain mainer = IntanWrapperMain(evalBoard);
-    mainer.argumentParse(argc, argv);
-    Logger* logger = Logger::getInstance();
-    logger->log("my_tag", "my_message");
-    SignalReader signalReader = SignalReader(evalBoard, mainer.getTimeSteps(), mainer.getSamplingRate());
-    signalReader.run(mainer.getPriority());
+	_setmode(fileno(stdout), O_BINARY);
+	_setmode(fileno(stdin), O_BINARY);
+
+	Rhd2000EvalBoard* intanBoard = new Rhd2000EvalBoard;
+	IntanInitializer intanInitializer = IntanInitializer(intanBoard);
+
+	intanInitializer.argumentParse(argc, argv);
+	unsigned int timeSteps = intanInitializer.getTimeSteps();
+	unsigned int samplingRate = intanInitializer.getSamplingRate();
+	string priority = intanInitializer.getPriority();
+
+	SignalReader signalReader = SignalReader(intanBoard, timeSteps, samplingRate);
+	signalReader.run(priority);
 }

@@ -21,6 +21,7 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <sstream>
 #include <vector>
 #include <queue>
 #include <cmath>
@@ -55,9 +56,12 @@ int Rhd2000EvalBoard::open()
     char dll_date[32], dll_time[32];
     string serialNumber = "";
     int i, nDevices;
+
     stringstream stream1;
     Logger* logger = Logger::getInstance();
+
     logger->log("Rhd2000EvalBoard", "---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----");
+
     if (okFrontPanelDLL_LoadLib(NULL) == false) {
         cerr << "FrontPanel DLL could not be loaded.  " <<
                 "Make sure this DLL is in the application start directory." << endl;
@@ -66,17 +70,15 @@ int Rhd2000EvalBoard::open()
     okFrontPanelDLL_GetVersion(dll_date, dll_time);
     
     stream1 << endl << "FrontPanel DLL loaded.  Built: " << dll_date << "  " << dll_time << endl;
-    logger->log("Rhd2000EvalBoard", stream1.str());
 
     dev = new okCFrontPanel;
 
     stream1 << endl << "Scanning USB for Opal Kelly devices..." << endl << endl;
-    logger->log("Rhd2000EvalBoard", stream1.str());
+
 
     nDevices = dev->GetDeviceCount();
     stream1 << "Found " << nDevices << " Opal Kelly device" << ((nDevices == 1) ? "" : "s") <<
             " connected:" << endl;
-    logger->log("Rhd2000EvalBoard", stream1.str());
     for (i = 0; i < nDevices; ++i) {
         stream1 << "  Device #" << i + 1 << ": Opal Kelly " <<
                 opalKellyModelName(dev->GetDeviceListModel(i)).c_str() <<
@@ -84,7 +86,6 @@ int Rhd2000EvalBoard::open()
         logger->log("Rhd2000EvalBoard", stream1.str());
     }
     stream1 << endl;
-    logger->log("Rhd2000EvalBoard", stream1.str());
 
     // Find first device in list of type XEM6010LX45.
     for (i = 0; i < nDevices; ++i) {
@@ -95,7 +96,6 @@ int Rhd2000EvalBoard::open()
     }
 
     stream1 << "Attempting to connect to device '" << serialNumber.c_str() << "'\n";
-    logger->log("Rhd2000EvalBoard", stream1.str());
 
     okCFrontPanel::ErrorCode result = dev->OpenBySerial(serialNumber);
     // Attempt to open device.
@@ -111,15 +111,12 @@ int Rhd2000EvalBoard::open()
 
     // Get some general information about the XEM.
     stream1 << "FPGA system clock: " << getSystemClockFreq() << " MHz" << endl; // Should indicate 100 MHz
-    logger->log("Rhd2000EvalBoard", stream1.str());
     stream1 << "Opal Kelly device firmware version: " << dev->GetDeviceMajorVersion() << "." <<
             dev->GetDeviceMinorVersion() << endl;
-    logger->log("Rhd2000EvalBoard", stream1.str());
     stream1 << "Opal Kelly device serial number: " << dev->GetSerialNumber().c_str() << endl;
-    logger->log("Rhd2000EvalBoard", stream1.str());
     stream1 << "Opal Kelly device ID string: " << dev->GetDeviceID().c_str() << endl << endl;
-    logger->log("Rhd2000EvalBoard", stream1.str());
 
+    logger->log("Rhd2000EvalBoard", stream1.str());
     return 1;
 }
 
@@ -514,6 +511,8 @@ void Rhd2000EvalBoard::printCommandList(const vector<int> &commandList) const
     unsigned int i;
     int cmd, channel, reg, data;
     stringstream stream1;
+    Logger* logger = Logger::getInstance();
+
     stream1 << endl;
     logger->log("Rhd2000EvalBoard", stream1.str());
     for (i = 0; i < commandList.size(); ++i) {
@@ -1561,7 +1560,9 @@ string Rhd2000EvalBoard::opalKellyModelName(int model) const
 int Rhd2000EvalBoard::getBoardMode() const
 {
     int mode;
+    Logger* logger = Logger::getInstance();
     stringstream stream1;
+
     dev->UpdateWireOuts();
     mode = dev->GetWireOutValue(WireOutBoardMode);
     
