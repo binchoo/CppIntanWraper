@@ -25,6 +25,7 @@
 #include <iostream>
 #include "./gbrain/IntanWrapperMain.h"
 #include "./gbrain/signalReader.h"
+#include "./gbrain/logger.h"
 
 using namespace std;
 
@@ -34,7 +35,8 @@ int main(int argc, char *argv[])
     Rhd2000EvalBoard *evalBoard = new Rhd2000EvalBoard;
     IntanWrapperMain mainer = IntanWrapperMain(evalBoard);
     mainer.argumentParse(argc, argv);
-    mainer.printValues();
+    Logger* logger = Logger::getInstance();
+    logger->log("my_tag", "my_message");
     SignalReader signalReader = SignalReader(evalBoard, mainer.getTimeSteps(), mainer.getSamplingRate());
     signalReader.run(mainer.getPriority());
 }

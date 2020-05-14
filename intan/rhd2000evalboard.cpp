@@ -27,9 +27,8 @@
 
 #include "rhd2000evalboard.h"
 #include "rhd2000datablock.h"
-
 #include "okFrontPanelDLL.h"
-
+#include "../gbrain/logger.h"
 using namespace std;
 
 // This class provides access to and control of the Opal Kelly XEM6010 USB/FPGA
@@ -56,6 +55,8 @@ int Rhd2000EvalBoard::open()
     char dll_date[32], dll_time[32];
     string serialNumber = "";
     int i, nDevices;
+   
+    Logger* logger = Logger::getInstance();
 
     cout << "---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----" << endl << endl;
     if (okFrontPanelDLL_LoadLib(NULL) == false) {

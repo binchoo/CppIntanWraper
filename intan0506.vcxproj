@@ -99,6 +99,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="gbrain\IntanWrapperMain.cpp" />
+    <ClCompile Include="gbrain\logger.cpp" />
     <ClCompile Include="gbrain\signalReader.cpp" />
     <ClCompile Include="getopt\getopt.c" />
     <ClCompile Include="intan\okFrontPanelDLL.cpp" />
@@ -109,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gbrain\IntanWrapperMain.h" />
+    <ClInclude Include="gbrain\logger.h" />
     <ClInclude Include="gbrain\signalReader.h" />
     <ClInclude Include="getopt\getopt.h" />
     <ClInclude Include="intan\okFrontPanelDLL.h" />
