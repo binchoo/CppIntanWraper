@@ -1,0 +1,2 @@
+C:\Users\gbrain_lab\Desktop\ISBS\CppIntanWraper\Debug\intan.exe
+C:\Users\gbrain_lab\Desktop\ISBS\CppIntanWraper\Debug\intan.pdb
