@@ -1,8 +1,1 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: 중간 디렉터리(Debug\)에 다른 프로젝트(intan.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
-  logger.cpp
-C:\Users\gbrain_lab\Desktop\CppIntanWraper\gbrain\logger.cpp(24,13): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  rhd2000evalboard.cpp
-C:\Users\gbrain_lab\Desktop\CppIntanWraper\intan\rhd2000evalboard.cpp(1406,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  main.cpp
-  코드를 생성하고 있습니다...
-  intan0506.vcxproj -> C:\Users\gbrain_lab\Desktop\CppIntanWraper\Debug\intan0506.exe
+﻿

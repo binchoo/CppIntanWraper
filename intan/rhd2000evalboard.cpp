@@ -21,6 +21,7 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <sstream>
 #include <vector>
 #include <queue>
 #include <cmath>
@@ -55,30 +56,36 @@ int Rhd2000EvalBoard::open()
     char dll_date[32], dll_time[32];
     string serialNumber = "";
     int i, nDevices;
-   
+
+    stringstream stream1;
     Logger* logger = Logger::getInstance();
 
-    cout << "---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----" << endl << endl;
+    logger->log("Rhd2000EvalBoard", "---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----");
+
     if (okFrontPanelDLL_LoadLib(NULL) == false) {
         cerr << "FrontPanel DLL could not be loaded.  " <<
                 "Make sure this DLL is in the application start directory." << endl;
         return -1;
     }
     okFrontPanelDLL_GetVersion(dll_date, dll_time);
-    cout << endl << "FrontPanel DLL loaded.  Built: " << dll_date << "  " << dll_time << endl;
+    
+    stream1 << endl << "FrontPanel DLL loaded.  Built: " << dll_date << "  " << dll_time << endl;
 
     dev = new okCFrontPanel;
 
-    cout << endl << "Scanning USB for Opal Kelly devices..." << endl << endl;
+    stream1 << endl << "Scanning USB for Opal Kelly devices..." << endl << endl;
+
+
     nDevices = dev->GetDeviceCount();
-    cout << "Found " << nDevices << " Opal Kelly device" << ((nDevices == 1) ? "" : "s") <<
+    stream1 << "Found " << nDevices << " Opal Kelly device" << ((nDevices == 1) ? "" : "s") <<
             " connected:" << endl;
     for (i = 0; i < nDevices; ++i) {
-        cout << "  Device #" << i + 1 << ": Opal Kelly " <<
+        stream1 << "  Device #" << i + 1 << ": Opal Kelly " <<
                 opalKellyModelName(dev->GetDeviceListModel(i)).c_str() <<
                 " with serial number " << dev->GetDeviceListSerial(i).c_str() << endl;
+        logger->log("Rhd2000EvalBoard", stream1.str());
     }
-    cout << endl;
+    stream1 << endl;
 
     // Find first device in list of type XEM6010LX45.
     for (i = 0; i < nDevices; ++i) {
@@ -88,7 +95,7 @@ int Rhd2000EvalBoard::open()
         }
     }
 
-    cout << "Attempting to connect to device '" << serialNumber.c_str() << "'\n";
+    stream1 << "Attempting to connect to device '" << serialNumber.c_str() << "'\n";
 
     okCFrontPanel::ErrorCode result = dev->OpenBySerial(serialNumber);
     // Attempt to open device.
@@ -103,12 +110,13 @@ int Rhd2000EvalBoard::open()
     dev->LoadDefaultPLLConfiguration();
 
     // Get some general information about the XEM.
-    cout << "FPGA system clock: " << getSystemClockFreq() << " MHz" << endl; // Should indicate 100 MHz
-    cout << "Opal Kelly device firmware version: " << dev->GetDeviceMajorVersion() << "." <<
+    stream1 << "FPGA system clock: " << getSystemClockFreq() << " MHz" << endl; // Should indicate 100 MHz
+    stream1 << "Opal Kelly device firmware version: " << dev->GetDeviceMajorVersion() << "." <<
             dev->GetDeviceMinorVersion() << endl;
-    cout << "Opal Kelly device serial number: " << dev->GetSerialNumber().c_str() << endl;
-    cout << "Opal Kelly device ID string: " << dev->GetDeviceID().c_str() << endl << endl;
+    stream1 << "Opal Kelly device serial number: " << dev->GetSerialNumber().c_str() << endl;
+    stream1 << "Opal Kelly device ID string: " << dev->GetDeviceID().c_str() << endl << endl;
 
+    logger->log("Rhd2000EvalBoard", stream1.str());
     return 1;
 }
 
@@ -116,6 +124,8 @@ int Rhd2000EvalBoard::open()
 bool Rhd2000EvalBoard::uploadFpgaBitfile(string filename)
 {
     okCFrontPanel::ErrorCode errorCode = dev->ConfigureFPGA(filename);
+    stringstream stream1;
+    Logger* logger = Logger::getInstance();
 
     switch (errorCode) {
         case okCFrontPanel::NoError:
@@ -162,8 +172,9 @@ bool Rhd2000EvalBoard::uploadFpgaBitfile(string filename)
         cerr << "FPGA configuration does not support Rhythm.  Incorrect board ID: " << boardId << endl;
         return(false);
     } else {
-        cout << "Rhythm configuration file successfully loaded.  Rhythm version number: " <<
+        stream1 << "Rhythm configuration file successfully loaded.  Rhythm version number: " <<
                 boardVersion << endl << endl;
+        logger->log("Rhd2000EvalBoard upload", stream1.str());
     }
 
     return(true);
@@ -499,35 +510,50 @@ void Rhd2000EvalBoard::printCommandList(const vector<int> &commandList) const
 {
     unsigned int i;
     int cmd, channel, reg, data;
+    stringstream stream1;
+    Logger* logger = Logger::getInstance();
 
-    cout << endl;
+    stream1 << endl;
+    logger->log("Rhd2000EvalBoard", stream1.str());
     for (i = 0; i < commandList.size(); ++i) {
         cmd = commandList[i];
         if (cmd < 0 || cmd > 0xffff) {
-            cout << "  command[" << i << "] = INVALID COMMAND: " << cmd << endl;
+            stream1 << "  command[" << i << "] = INVALID COMMAND: " << cmd << endl;
+            logger->log("Rhd2000EvalBoard", stream1.str());
         } else if ((cmd & 0xc000) == 0x0000) {
             channel = (cmd & 0x3f00) >> 8;
-            cout << "  command[" << i << "] = CONVERT(" << channel << ")" << endl;
+            stream1 << "  command[" << i << "] = CONVERT(" << channel << ")" << endl;
+            logger->log("Rhd2000EvalBoard", stream1.str());
         } else if ((cmd & 0xc000) == 0xc000) {
             reg = (cmd & 0x3f00) >> 8;
-            cout << "  command[" << i << "] = READ(" << reg << ")" << endl;
+            stream1 << "  command[" << i << "] = READ(" << reg << ")" << endl;
+            logger->log("Rhd2000EvalBoard", stream1.str());
         } else if ((cmd & 0xc000) == 0x8000) {
             reg = (cmd & 0x3f00) >> 8;
             data = (cmd & 0x00ff);
-            cout << "  command[" << i << "] = WRITE(" << reg << ",";
-            cout << hex << uppercase << internal << setfill('0') << setw(2) << data << nouppercase << dec;
-            cout << ")" << endl;
+            stream1 << "  command[" << i << "] = WRITE(" << reg << ",";
+            logger->log("Rhd2000EvalBoard", stream1.str());
+            stream1 << hex << uppercase << internal << setfill('0') << setw(2) << data << nouppercase << dec;
+            logger->log("Rhd2000EvalBoard", stream1.str());
+            stream1 << ")" << endl;
+            logger->log("Rhd2000EvalBoard", stream1.str());
         } else if (cmd == 0x5500) {
-            cout << "  command[" << i << "] = CALIBRATE" << endl;
+            stream1 << "  command[" << i << "] = CALIBRATE" << endl;
+            logger->log("Rhd2000EvalBoard", stream1.str());
         } else if (cmd == 0x6a00) {
-            cout << "  command[" << i << "] = CLEAR" << endl;
+            stream1 << "  command[" << i << "] = CLEAR" << endl;
+            logger->log("Rhd2000EvalBoard", stream1.str());
         } else {
-            cout << "  command[" << i << "] = INVALID COMMAND: ";
-            cout << hex << uppercase << internal << setfill('0') << setw(4) << cmd << nouppercase << dec;
-            cout << endl;
+            stream1 << "  command[" << i << "] = INVALID COMMAND: ";
+            logger->log("Rhd2000EvalBoard", stream1.str());
+            stream1 << hex << uppercase << internal << setfill('0') << setw(4) << cmd << nouppercase << dec;
+            logger->log("Rhd2000EvalBoard", stream1.str());
+            stream1 << endl;
+            logger->log("Rhd2000EvalBoard", stream1.str());
         }
     }
-    cout << endl;
+    stream1 << endl;
+    logger->log("Rhd2000EvalBoard", stream1.str());
 }
 
 // Upload an auxiliary command list to a particular command slot (AuxCmd1, AuxCmd2, or AuxCmd3) and RAM bank (0-15)
@@ -1534,11 +1560,14 @@ string Rhd2000EvalBoard::opalKellyModelName(int model) const
 int Rhd2000EvalBoard::getBoardMode() const
 {
     int mode;
+    Logger* logger = Logger::getInstance();
+    stringstream stream1;
 
     dev->UpdateWireOuts();
     mode = dev->GetWireOutValue(WireOutBoardMode);
-
-    cout << "Board mode: " << mode << endl << endl;
+    
+    stream1 << "Board mode: " << mode << endl << endl;
+    logger->log("Rhd2000EvalBoard", stream1.str());
 
     return mode;
 }

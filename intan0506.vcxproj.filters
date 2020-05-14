@@ -59,13 +59,13 @@
     <ClInclude Include="gbrain\signalReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="gbrain\IntanWrapperMain.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="getopt\getopt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="gbrain\logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gbrain\intanInitializer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
