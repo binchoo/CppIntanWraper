@@ -22,13 +22,12 @@
 #include <queue>
 #include <time.h>
 #include <assert.h>
-#include "IntanWrapperMain.h"
-#include "signalReader.h"
 #include <iostream>
+#include "./gbrain/IntanWrapperMain.h"
+#include "./gbrain/signalReader.h"
 
 using namespace std;
 
-void initIntanEvalBoard(Rhd2000EvalBoard*);
 
 int main(int argc, char *argv[])
 {
@@ -38,13 +37,4 @@ int main(int argc, char *argv[])
     mainer.printValues();
     SignalReader signalReader = SignalReader(evalBoard, mainer.getTimeSteps(), mainer.getSamplingRate());
     signalReader.run(mainer.getPriority());
-}
-
-void initIntanEvalBoard(Rhd2000EvalBoard* evalBoard) {
-
-    queue<Rhd2000DataBlock> dataQueue;
-
-    evalBoard->setMaxTimeStep(120000);
-    evalBoard->setContinuousRunMode(FALSE);
-    evalBoard->enableDataStream(4, true);
 }

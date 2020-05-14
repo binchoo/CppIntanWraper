@@ -15,51 +15,51 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="intan\okFrontPanelDLL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intan\rhd2000datablock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intan\rhd2000evalboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intan\rhd2000registers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="getopt\getopt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gbrain\IntanWrapperMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gbrain\signalReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="okFrontPanelDLL.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rhd2000datablock.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rhd2000evalboard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rhd2000registers.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="getopt.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="IntanWrapperMaincpp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="signalReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="okFrontPanelDLL.h">
+    <ClInclude Include="intan\rhd2000registers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="rhd2000datablock.h">
+    <ClInclude Include="intan\rhd2000evalboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="rhd2000evalboard.h">
+    <ClInclude Include="intan\rhd2000datablock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="rhd2000registers.h">
+    <ClInclude Include="intan\okFrontPanelDLL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="getopt.h">
+    <ClInclude Include="gbrain\signalReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IntanWrapperMain.h">
+    <ClInclude Include="gbrain\IntanWrapperMain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="signalReader.h">
+    <ClInclude Include="getopt\getopt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
