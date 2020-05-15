@@ -23,16 +23,19 @@
 #include "./gbrain/signalReader.h"
 #include "./gbrain/logger.h"
 
-int main(int argc, char* argv[])
-{
+extern void test_suite();
+int main(int argc, char* argv[]) {
+
 	_setmode(fileno(stdout), O_BINARY);
 	_setmode(fileno(stdin), O_BINARY);
+	
+	//test_suite();
 
 	Rhd2000EvalBoard* intanBoard = new Rhd2000EvalBoard;
 	IntanInitializer intanInitializer = IntanInitializer(intanBoard);
 
 	intanInitializer.argumentParse(argc, argv);
-	unsigned int timeSteps = intanInitializer.getTimeSteps();
+	unsigned int timeSteps = intanInitializer.getRuningTime();
 	unsigned int samplingRate = intanInitializer.getSamplingRate();
 	string priority = intanInitializer.getPriority();
 

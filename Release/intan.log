@@ -1,0 +1,18 @@
+﻿  intanInitializer.cpp
+  logger.cpp
+C:\Users\gbrain_lab\Desktop\ISBS\CppIntanWraper\gbrain\logger.cpp(24,13): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  signalReader.cpp
+C:\Users\gbrain_lab\Desktop\ISBS\CppIntanWraper\gbrain\signalReader.cpp(14,72): warning C4244: '인수': 'double'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  okFrontPanelDLL.cpp
+  rhd2000datablock.cpp
+  rhd2000evalboard.cpp
+C:\Users\gbrain_lab\Desktop\ISBS\CppIntanWraper\intan\rhd2000evalboard.cpp(1432,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  rhd2000registers.cpp
+  main.cpp
+C:\Users\gbrain_lab\Desktop\ISBS\CppIntanWraper\main.cpp(29,11): warning C4996: 'fileno': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _fileno. See online help for details.
+C:\Users\gbrain_lab\Desktop\ISBS\CppIntanWraper\main.cpp(30,11): warning C4996: 'fileno': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _fileno. See online help for details.
+  test.cpp
+  코드를 생성하고 있습니다...
+  getopt.c
+LINK : warning LNK4075: '/INCREMENTAL'이(가) '/OPT:ICF' 사양으로 인해 무시됩니다.
+  intan.vcxproj -> C:\Users\gbrain_lab\Desktop\ISBS\CppIntanWraper\Release\intan.exe

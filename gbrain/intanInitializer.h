@@ -7,7 +7,8 @@
 #include "../intan/rhd2000evalboard.h"
 #include <map>
 #include <iostream>
-
+#include <sstream>
+#include "logger.h"
 using namespace std;
 
 class IntanInitializer {
@@ -16,7 +17,7 @@ public:
     IntanInitializer(Rhd2000EvalBoard* evalBoard);
     void argumentParse(int argc, char** argv);
     void printParameters();
-    unsigned int getTimeSteps();
+    unsigned int getRuningTime();
     unsigned int getSamplingRate();
     string getPriority();
     string getDataStreams();
@@ -32,6 +33,7 @@ private:
     string priority;
     string dataStreams;
 
+    bool checkValidityForRunningTime(string runningTime);
     bool checkValidityForPriority(string priority);
     bool checkValidityForDataStreams(string dataStreams);
 

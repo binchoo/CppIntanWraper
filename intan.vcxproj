@@ -92,13 +92,13 @@
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="gbrain\IntanWrapperMain.cpp" />
+    <ClCompile Include="gbrain\intanInitializer.cpp" />
     <ClCompile Include="gbrain\logger.cpp" />
     <ClCompile Include="gbrain\signalReader.cpp" />
     <ClCompile Include="getopt\getopt.c" />
@@ -107,6 +107,7 @@
     <ClCompile Include="intan\rhd2000evalboard.cpp" />
     <ClCompile Include="intan\rhd2000registers.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gbrain\intanInitializer.h" />
@@ -117,6 +118,7 @@
     <ClInclude Include="intan\rhd2000datablock.h" />
     <ClInclude Include="intan\rhd2000evalboard.h" />
     <ClInclude Include="intan\rhd2000registers.h" />
+    <ClInclude Include="test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

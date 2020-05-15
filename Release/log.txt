@@ -1,0 +1,755 @@
+[Rhd2000EvalBoard|2020-05-15.12:08:36]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:08:36]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:08:36]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:08:37]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[Rhd2000EvalBoard|2020-05-15.12:08:44]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:08:44]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:08:44]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:08:44]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[Rhd2000EvalBoard|2020-05-15.12:09:27]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:09:27]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:09:27]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:09:27]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:11:34]
+[Rhd2000EvalBoard|2020-05-15.12:11:34]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[initializer|2020-05-15.12:11:49]
+[Rhd2000EvalBoard|2020-05-15.12:11:49]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:11:49]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:11:49]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:11:49]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:12:22]
+[Rhd2000EvalBoard|2020-05-15.12:12:22]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:12:22]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:12:22]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:12:23]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:12:28]
+[Rhd2000EvalBoard|2020-05-15.12:12:28]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:12:28]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:12:28]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:12:29]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:12:43]
+[Rhd2000EvalBoard|2020-05-15.12:12:43]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:12:43]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:12:43]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:12:43]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:13:19]
+[Rhd2000EvalBoard|2020-05-15.12:13:19]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:13:19]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:13:19]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:13:19]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:13:24]
+[Rhd2000EvalBoard|2020-05-15.12:13:24]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:13:24]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:13:24]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:13:24]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:15:56]
+[Rhd2000EvalBoard|2020-05-15.12:15:56]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:15:56]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:15:56]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:15:56]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:16:00]
+[Rhd2000EvalBoard|2020-05-15.12:16:00]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:16:00]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:16:00]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:16:00]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:29:03]
+[Rhd2000EvalBoard|2020-05-15.12:29:03]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:29:03]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:29:03]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:29:03]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:29:08]
+[Rhd2000EvalBoard|2020-05-15.12:29:08]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:29:08]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:29:08]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:29:08]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:29:13]
+[Rhd2000EvalBoard|2020-05-15.12:29:13]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:29:13]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:29:13]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:29:13]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:29:17]
+[Rhd2000EvalBoard|2020-05-15.12:29:17]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:29:17]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:29:17]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:29:17]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:29:22]
+[Rhd2000EvalBoard|2020-05-15.12:29:22]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:29:22]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:29:22]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:29:23]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:29:27]
+[Rhd2000EvalBoard|2020-05-15.12:29:27]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:29:27]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:29:27]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:29:27]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:32:14]
+[Rhd2000EvalBoard|2020-05-15.12:32:14]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:32:14]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:32:14]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:32:14]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:32:18]
+[Rhd2000EvalBoard|2020-05-15.12:32:18]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:32:18]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:32:18]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:32:18]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:32:21]
+[Rhd2000EvalBoard|2020-05-15.12:32:21]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:32:22]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:32:22]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:32:22]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:33:30]
+[Rhd2000EvalBoard|2020-05-15.12:33:30]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:33:30]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:33:30]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:33:30]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:33:38]
+[Rhd2000EvalBoard|2020-05-15.12:33:38]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:33:38]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:33:38]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:33:38]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:33:46]
+[Rhd2000EvalBoard|2020-05-15.12:33:46]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:33:46]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:33:46]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:33:46]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:35:09]
+[Rhd2000EvalBoard|2020-05-15.12:35:09]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:35:09]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:35:09]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:35:09]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:42:32]
+[Rhd2000EvalBoard|2020-05-15.12:42:32]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:42:32]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:42:32]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:42:32]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:42:38]
+[Rhd2000EvalBoard|2020-05-15.12:42:38]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:42:38]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:42:38]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:42:38]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
+[initializer|2020-05-15.12:42:43]
+[Rhd2000EvalBoard|2020-05-15.12:42:43]---- Intan Technologies ---- Rhythm RHD2000 Controller v1.0 ----
+[Rhd2000EvalBoard|2020-05-15.12:42:43]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+[Rhd2000EvalBoard|2020-05-15.12:42:43]
+FrontPanel DLL loaded.  Built: Nov 13 2012  11:17:22
+
+Scanning USB for Opal Kelly devices...
+
+Found 1 Opal Kelly device connected:
+  Device #1: Opal Kelly XEM6010LX45 with serial number 1615000E5R
+
+Attempting to connect to device '1615000E5R'
+FPGA system clock: 100 MHz
+Opal Kelly device firmware version: 3.1
+Opal Kelly device serial number: 1615000E5R
+Opal Kelly device ID string: Opal Kelly XEM6010
+
+
+[Rhd2000EvalBoard upload|2020-05-15.12:42:43]Rhythm configuration file successfully loaded.  Rhythm version number: 1
+
+
