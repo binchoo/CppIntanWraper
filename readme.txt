@@ -10,11 +10,11 @@ samplingRate = 12500; (default)
 priority = "tsc"; (default)
 tcs stc sct cts cst 사용가능
 
-t : timestep (60개의 샘플)
+4. t : timestep (60개의 샘플)
 s : stream (포트 04사용시 2개)
 c : channel (32채널)
 
-4. -P 04
+5. -P 04
 dataStreams = "04"; (default)
 0: portA1 (32ch)
 1: portB1 (32ch)
