@@ -120,7 +120,8 @@ bool IntanInitializer::checkValidityForDataStreams(string dataStreams) {
 
 void IntanInitializer::argumentParse(int argc, char** argv) {
 	char opt;
-	stringstream ss;
+	Logger& logger = Logger::getInstance();
+
 	while ((opt = getopt(argc, argv, "s:t:p:P:")) != -1) {
 		switch (opt) {
 			case 's':
@@ -136,21 +137,20 @@ void IntanInitializer::argumentParse(int argc, char** argv) {
 				if (checkValidityForPriority(string(optarg)))
 					priority = string(optarg);
 				else
-					ss << "invalid value is set to priority: " << optarg << endl
+					logger << "invalid value is set to priority: " << optarg << endl
 						<< "default priority is: " << priority << endl;
 				break;
 			case 'P':
 				if (checkValidityForDataStreams(string(optarg)))
 					dataStreams = string(optarg);
 				else
-					ss << "invalid value is set to datastreams: " << optarg << endl
+					logger << "invalid value is set to datastreams: " << optarg << endl
 					<< "default datastremas are: " << dataStreams << endl;
 				break;
 		}
 	}
 
-	Logger* logger = Logger::getInstance();
-	logger->log("initializer", ss.str());
+	logger.commit("IntanInitializer");
 	initIntanEvalBoard();
 }
 
