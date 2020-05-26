@@ -81,7 +81,6 @@ int Rhd2000EvalBoard::open()
         logger << "  Device #" << i + 1 << ": Opal Kelly " <<
                 opalKellyModelName(dev->GetDeviceListModel(i)).c_str() <<
                 " with serial number " << dev->GetDeviceListSerial(i).c_str() << endl;
-        logger.commit("Rhd2000EvalBoard");
     }
 
     // Find first device in list of type XEM6010LX45.
@@ -127,28 +126,28 @@ bool Rhd2000EvalBoard::uploadFpgaBitfile(string filename)
         case okCFrontPanel::NoError:
             break;
         case okCFrontPanel::DeviceNotOpen:
-            cerr << "FPGA configuration failed: Device not open." << endl;
+            logger << "FPGA configuration failed: Device not open." << endl;
             return(false);
         case okCFrontPanel::FileError:
-            cerr << "FPGA configuration failed: Cannot find configuration file." << endl;
+            logger << "FPGA configuration failed: Cannot find configuration file." << endl;
             return(false);
         case okCFrontPanel::InvalidBitstream:
-            cerr << "FPGA configuration failed: Bitstream is not properly formatted." << endl;
+            logger << "FPGA configuration failed: Bitstream is not properly formatted." << endl;
             return(false);
         case okCFrontPanel::DoneNotHigh:
-            cerr << "FPGA configuration failed: FPGA DONE signal did not assert after configuration." << endl;
+            logger << "FPGA configuration failed: FPGA DONE signal did not assert after configuration." << endl;
             return(false);
         case okCFrontPanel::TransferError:
-            cerr << "FPGA configuration failed: USB error occurred during download." << endl;
+            logger << "FPGA configuration failed: USB error occurred during download." << endl;
             return(false);
         case okCFrontPanel::CommunicationError:
-            cerr << "FPGA configuration failed: Communication error with firmware." << endl;
+            logger << "FPGA configuration failed: Communication error with firmware." << endl;
             return(false);
         case okCFrontPanel::UnsupportedFeature:
-            cerr << "FPGA configuration failed: Unsupported feature." << endl;
+            logger << "FPGA configuration failed: Unsupported feature." << endl;
             return(false);
         default:
-            cerr << "FPGA configuration failed: Unknown error." << endl;
+            logger << "FPGA configuration failed: Unknown error." << endl;
             return(false);
     }
 
@@ -165,14 +164,13 @@ bool Rhd2000EvalBoard::uploadFpgaBitfile(string filename)
     boardVersion = dev->GetWireOutValue(WireOutBoardVersion);
 
     if (boardId != RHYTHM_BOARD_ID) {
-        cerr << "FPGA configuration does not support Rhythm.  Incorrect board ID: " << boardId << endl;
+        logger << "FPGA configuration does not support Rhythm.  Incorrect board ID: " << boardId << endl;
         return(false);
     } else {
         logger << "Rhythm configuration file successfully loaded.  Rhythm version number: " <<
                 boardVersion << endl << endl;
-        logger.commit("Rhd2000EvalBoard upload");
     }
-
+    logger.commit("Rhd2000EvalBoard upload");
     return(true);
 }
 
@@ -507,6 +505,7 @@ void Rhd2000EvalBoard::printCommandList(const vector<int> &commandList) const
     unsigned int i;
     int cmd, channel, reg, data;
     Logger& logger = Logger::getInstance();
+
     for (i = 0; i < commandList.size(); ++i) {
         cmd = commandList[i];
         if (cmd < 0 || cmd > 0xffff) {
@@ -1542,7 +1541,6 @@ int Rhd2000EvalBoard::getBoardMode() const
 {
     int mode;
     Logger& logger = Logger::getInstance();
-    stringstream logger;
 
     dev->UpdateWireOuts();
     mode = dev->GetWireOutValue(WireOutBoardMode);

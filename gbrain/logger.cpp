@@ -40,8 +40,80 @@ ostream& operator<<(Logger& logger, const int i)
 	return logger.ss;
 }
 
-ostream& operator<<(Logger& logger, std::ios_base& base)
+ostream& operator<<(Logger& logger, unsigned int val)
 {
-	logger.ss << base;
+	logger.ss << val;
 	return logger.ss;
-}) 
+}
+
+ostream& operator<<(Logger& logger, long val)
+{
+	logger.ss << val;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, unsigned long val)
+{
+	logger.ss << val;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, float val)
+{
+	logger.ss << val;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, double val)
+{
+	logger.ss << val;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, long double val)
+{
+	logger.ss << val;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, void* val)
+{
+	logger.ss << val;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, ostream& (*pf)(ostream&))
+{
+	logger.ss << pf;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, ios& (*pf)(ios&))
+{
+	logger.ss << pf;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, ios_base& (*pf)(ios_base&))
+{
+	logger.ss << pf;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, bool val)
+{
+	logger.ss << val;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, short val)
+{
+	logger.ss << val;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, unsigned short val)
+{
+	logger.ss << val;
+	return logger.ss;
+}
