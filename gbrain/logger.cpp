@@ -1,7 +1,9 @@
+#pragma once
 #include "logger.h"
 #include <ctime>
 
-Logger* Logger::instance = nullptr;
+Logger* Logger::instance = instance;
+stringstream Logger::ss;
 
 Logger& Logger::getInstance() {
 	if (Logger::instance == nullptr) {
@@ -22,15 +24,21 @@ string Logger::currentDateTime() {
 	struct tm tstruct;
 	char buf[80];
 
-	tstruct = *localtime(&now);
+	localtime_s(&tstruct, &now);
 	strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
 
 	return buf;
 }
 
-ostream& operator<<(Logger& logger, const string s)
+ostream& operator<<(Logger& logger, const char* val)
 {
-	logger.ss << s ;
+	logger.ss << val;
+	return logger.ss;
+}
+
+ostream& operator<<(Logger& logger, streambuf* sb)
+{
+	logger.ss << sb;
 	return logger.ss;
 }
 

@@ -7,7 +7,7 @@ using namespace std;
 
 class Logger {
 private:
-	stringstream ss;
+	static stringstream ss;
 	static Logger* instance;
 
 	Logger() {
@@ -15,13 +15,14 @@ private:
 	};
 
 	Logger(const Logger& other);
-	
+
 	string currentDateTime();
-	
+
 public:
 	static Logger& getInstance();
 	void commit(string tag);
-	friend ostream& operator<< (Logger& logger, const string s);
+	friend ostream& operator<< (Logger& logger, const char* val);
+	friend ostream& operator<< (Logger& logger, streambuf* sb);
 	friend ostream& operator<< (Logger& logger, const int s);
 	friend ostream& operator<< (Logger& logger, bool val);
 	friend ostream& operator<< (Logger& logger, short val);
